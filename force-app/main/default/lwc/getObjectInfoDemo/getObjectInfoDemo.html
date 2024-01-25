@@ -7,4 +7,18 @@
       </template>
     </div>
   </lightning-card>
+
+  <!-- objectInfos -->
+  <lightning-card title="getObjectInfos Adapter">
+    <div class="slds-var-p-around_medium">
+      <template lwc:if={objectInfos}>
+        <template for:each={objectInfos.results} for:item="obj">
+          <div key={obj.result.apiName}>
+            <div>Object API Name: {obj.result.apiName}</div>
+            <div>defaultRecordTypeId: {obj.result.defaultRecordTypeId}</div>
+          </div>
+        </template>
+      </template>
+    </div>
+  </lightning-card>
 </template>
